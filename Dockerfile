@@ -23,4 +23,6 @@ COPY *.py ./
 ENV VIRTUAL_ENV="/venv"
 ENV PATH="${VIRTUAL_ENV}/bin:$PATH"
 
+EXPOSE 8501
+
 CMD streamlit run app.py
