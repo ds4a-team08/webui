@@ -1,7 +1,7 @@
 import dash_core_components as dcc
 import dash_html_components as html
 from dash.dependencies import Input, Output
-import apps.components as c
+import controllers.components as c
 import api
 import df_functions as f
 

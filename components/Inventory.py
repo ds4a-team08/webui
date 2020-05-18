@@ -5,6 +5,11 @@ import plotly.express as px
 import pandas as pd
 
 class Inventory:
+
+    def adviceLayout(self, inventoryData):
+        table = dbc.Table.from_dataframe(inventoryData, striped=True, bordered=True, hover=True)
+        return table
+
     def byModelLayout(self, modelData, size=10):
         return self.__draw_pie_by_index(modelData, 'Model', 10)
     
@@ -16,7 +21,8 @@ class Inventory:
         counts_df = counts_df.sort_values(by=[indexName, 'index'], ascending=[False, True])
         top_df = counts_df[:size]
         others_df = counts_df[size:]
-        top_df = top_df.append({'index': 'Others', indexName: others_df[indexName].astype(int).sum()}, ignore_index=True)
+        if len(others_df) > 1:
+            top_df = top_df.append({'index': 'Others', indexName: others_df[indexName].astype(int).sum()}, ignore_index=True)
         fig = px.pie(names="index", values=indexName, title=indexName+" Composition", data_frame=top_df)
         return dcc.Graph(figure=fig)
 

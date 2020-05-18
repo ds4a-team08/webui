@@ -4,7 +4,7 @@ from dash.dependencies import Input, Output
 import dash_bootstrap_components as dbc
 
 from app import app
-import apps as a
+import controllers
 import components as c
 
 
@@ -22,9 +22,9 @@ app.layout = dbc.Container([
               [Input('url', 'pathname')])
 def display_page(pathname):
     if pathname in ['/', '/margin']:
-        return a.margin.layout
+        return controllers.margin.layout
     elif pathname == '/inventory':
-        return a.inventory.layout
+        return controllers.inventory.layout
     else:
         return '404'
 
