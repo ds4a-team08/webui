@@ -1,10 +1,10 @@
 import numpy as np
 import pandas as pd
 
-def getData(start=None, end=None):
+def getMarginData(start=None, end=None):
     apiResult = [
         { 'Brand': 'HYUNDAI', 'Model': 'HB20', 'Margin': 0.17, 'Conversion': 0.88, 'MarketPrice': 0.0, 'VolantyPrice': 0.0, 'ExpectedMargin': 0.0, 'PBuy': 0.0, 'PSelling': 0.0, 'Date': '2019-10-01' },
-        { 'Brand': 'RENAULT', 'Model': 'SANDERO', 'Margin': 0.16, 'Conversion': 0.9, 'MarketPrice': 0.0, 'VolantyPrice': 0.0, 'ExpectedMargin': 0.0, 'PBuy': 0.0, 'PSelling': 0.0, 'Date': '2019-10-01' },
+        { 'Brand': 'RENAULT', 'Model': 'SANDERO', 'Margin': 0.148, 'Conversion': 0.9, 'MarketPrice': 0.0, 'VolantyPrice': 0.0, 'ExpectedMargin': 0.0, 'PBuy': 0.0, 'PSelling': 0.0, 'Date': '2019-10-01' },
         { 'Brand': 'VOLKSWAGEN', 'Model': 'UP', 'Margin': 0.16, 'Conversion': 0.9, 'MarketPrice': 0.0, 'VolantyPrice': 0.0, 'ExpectedMargin': 0.0, 'PBuy': 0.0, 'PSelling': 0.0, 'Date': '2019-10-01' },
         { 'Brand': 'FIAT', 'Model': 'UNO', 'Margin': 0.16, 'Conversion': 0.9, 'MarketPrice': 0.0, 'VolantyPrice': 0.0, 'ExpectedMargin': 0.0, 'PBuy': 0.0, 'PSelling': 0.0, 'Date': '2019-10-01' },
         { 'Brand': 'FORD', 'Model': 'FIESTA', 'Margin': 0.16, 'Conversion': 0.9, 'MarketPrice': 0.0, 'VolantyPrice': 0.0, 'ExpectedMargin': 0.0, 'PBuy': 0.0, 'PSelling': 0.0, 'Date': '2019-10-01' },
@@ -16,8 +16,8 @@ def getData(start=None, end=None):
         { 'Brand': 'CITROEN', 'Model': 'C4', 'Margin': 0.16, 'Conversion': 0.9, 'MarketPrice': 0.0, 'VolantyPrice': 0.0, 'ExpectedMargin': 0.0, 'PBuy': 0.0, 'PSelling': 0.0, 'Date': '2019-10-01' },
         { 'Brand': 'NISSAN', 'Model': 'MARCH', 'Margin': 0.16, 'Conversion': 0.9, 'MarketPrice': 0.0, 'VolantyPrice': 0.0, 'ExpectedMargin': 0.0, 'PBuy': 0.0, 'PSelling': 0.0, 'Date': '2019-10-01' },
         
-        { 'Brand': 'HYUNDAI', 'Model': 'HB20', 'Margin': 0.17, 'Conversion': 0.88, 'MarketPrice': 0.0, 'VolantyPrice': 0.0, 'ExpectedMargin': 0.0, 'PBuy': 0.0, 'PSelling': 0.0, 'Date': '2019-10-02' },
-        { 'Brand': 'RENAULT', 'Model': 'SANDERO', 'Margin': 0.16, 'Conversion': 0.9, 'MarketPrice': 0.0, 'VolantyPrice': 0.0, 'ExpectedMargin': 0.0, 'PBuy': 0.0, 'PSelling': 0.0, 'Date': '2019-10-02' },
+        { 'Brand': 'HYUNDAI', 'Model': 'HB20', 'Margin': 0.169, 'Conversion': 0.88, 'MarketPrice': 0.0, 'VolantyPrice': 0.0, 'ExpectedMargin': 0.0, 'PBuy': 0.0, 'PSelling': 0.0, 'Date': '2019-10-02' },
+        { 'Brand': 'RENAULT', 'Model': 'SANDERO', 'Margin': 0.15, 'Conversion': 0.9, 'MarketPrice': 0.0, 'VolantyPrice': 0.0, 'ExpectedMargin': 0.0, 'PBuy': 0.0, 'PSelling': 0.0, 'Date': '2019-10-02' },
         { 'Brand': 'VOLKSWAGEN', 'Model': 'UP', 'Margin': 0.16, 'Conversion': 0.9, 'MarketPrice': 0.0, 'VolantyPrice': 0.0, 'ExpectedMargin': 0.0, 'PBuy': 0.0, 'PSelling': 0.0, 'Date': '2019-10-02' },
         { 'Brand': 'FIAT', 'Model': 'UNO', 'Margin': 0.16, 'Conversion': 0.9, 'MarketPrice': 0.0, 'VolantyPrice': 0.0, 'ExpectedMargin': 0.0, 'PBuy': 0.0, 'PSelling': 0.0, 'Date': '2019-10-02' },
         { 'Brand': 'FORD', 'Model': 'FIESTA', 'Margin': 0.16, 'Conversion': 0.9, 'MarketPrice': 0.0, 'VolantyPrice': 0.0, 'ExpectedMargin': 0.0, 'PBuy': 0.0, 'PSelling': 0.0, 'Date': '2019-10-02' },
@@ -29,8 +29,8 @@ def getData(start=None, end=None):
         { 'Brand': 'CITROEN', 'Model': 'C4', 'Margin': 0.16, 'Conversion': 0.9, 'MarketPrice': 0.0, 'VolantyPrice': 0.0, 'ExpectedMargin': 0.0, 'PBuy': 0.0, 'PSelling': 0.0, 'Date': '2019-10-02' },
         { 'Brand': 'NISSAN', 'Model': 'MARCH', 'Margin': 0.16, 'Conversion': 0.9, 'MarketPrice': 0.0, 'VolantyPrice': 0.0, 'ExpectedMargin': 0.0, 'PBuy': 0.0, 'PSelling': 0.0, 'Date': '2019-10-02' },
 
-        { 'Brand': 'HYUNDAI', 'Model': 'HB20', 'Margin': 0.17, 'Conversion': 0.88, 'MarketPrice': 0.0, 'VolantyPrice': 0.0, 'ExpectedMargin': 0.0, 'PBuy': 0.0, 'PSelling': 0.0, 'Date': '2019-10-03' },
-        { 'Brand': 'RENAULT', 'Model': 'SANDERO', 'Margin': 0.16, 'Conversion': 0.9, 'MarketPrice': 0.0, 'VolantyPrice': 0.0, 'ExpectedMargin': 0.0, 'PBuy': 0.0, 'PSelling': 0.0, 'Date': '2019-10-03' },
+        { 'Brand': 'HYUNDAI', 'Model': 'HB20', 'Margin': 0.168, 'Conversion': 0.88, 'MarketPrice': 0.0, 'VolantyPrice': 0.0, 'ExpectedMargin': 0.0, 'PBuy': 0.0, 'PSelling': 0.0, 'Date': '2019-10-03' },
+        { 'Brand': 'RENAULT', 'Model': 'SANDERO', 'Margin': 0.152, 'Conversion': 0.9, 'MarketPrice': 0.0, 'VolantyPrice': 0.0, 'ExpectedMargin': 0.0, 'PBuy': 0.0, 'PSelling': 0.0, 'Date': '2019-10-03' },
         { 'Brand': 'VOLKSWAGEN', 'Model': 'UP', 'Margin': 0.16, 'Conversion': 0.9, 'MarketPrice': 0.0, 'VolantyPrice': 0.0, 'ExpectedMargin': 0.0, 'PBuy': 0.0, 'PSelling': 0.0, 'Date': '2019-10-03' },
         { 'Brand': 'FIAT', 'Model': 'UNO', 'Margin': 0.16, 'Conversion': 0.9, 'MarketPrice': 0.0, 'VolantyPrice': 0.0, 'ExpectedMargin': 0.0, 'PBuy': 0.0, 'PSelling': 0.0, 'Date': '2019-10-03' },
         { 'Brand': 'FORD', 'Model': 'FIESTA', 'Margin': 0.16, 'Conversion': 0.9, 'MarketPrice': 0.0, 'VolantyPrice': 0.0, 'ExpectedMargin': 0.0, 'PBuy': 0.0, 'PSelling': 0.0, 'Date': '2019-10-03' },
@@ -42,8 +42,8 @@ def getData(start=None, end=None):
         { 'Brand': 'CITROEN', 'Model': 'C4', 'Margin': 0.16, 'Conversion': 0.9, 'MarketPrice': 0.0, 'VolantyPrice': 0.0, 'ExpectedMargin': 0.0, 'PBuy': 0.0, 'PSelling': 0.0, 'Date': '2019-10-03' },
         { 'Brand': 'NISSAN', 'Model': 'MARCH', 'Margin': 0.16, 'Conversion': 0.9, 'MarketPrice': 0.0, 'VolantyPrice': 0.0, 'ExpectedMargin': 0.0, 'PBuy': 0.0, 'PSelling': 0.0, 'Date': '2019-10-03' },
 
-        { 'Brand': 'HYUNDAI', 'Model': 'HB20', 'Margin': 0.17, 'Conversion': 0.88, 'MarketPrice': 0.0, 'VolantyPrice': 0.0, 'ExpectedMargin': 0.0, 'PBuy': 0.0, 'PSelling': 0.0, 'Date': '2019-10-04' },
-        { 'Brand': 'RENAULT', 'Model': 'SANDERO', 'Margin': 0.16, 'Conversion': 0.9, 'MarketPrice': 0.0, 'VolantyPrice': 0.0, 'ExpectedMargin': 0.0, 'PBuy': 0.0, 'PSelling': 0.0, 'Date': '2019-10-04' },
+        { 'Brand': 'HYUNDAI', 'Model': 'HB20', 'Margin': 0.167, 'Conversion': 0.88, 'MarketPrice': 0.0, 'VolantyPrice': 0.0, 'ExpectedMargin': 0.0, 'PBuy': 0.0, 'PSelling': 0.0, 'Date': '2019-10-04' },
+        { 'Brand': 'RENAULT', 'Model': 'SANDERO', 'Margin': 0.153, 'Conversion': 0.9, 'MarketPrice': 0.0, 'VolantyPrice': 0.0, 'ExpectedMargin': 0.0, 'PBuy': 0.0, 'PSelling': 0.0, 'Date': '2019-10-04' },
         { 'Brand': 'VOLKSWAGEN', 'Model': 'UP', 'Margin': 0.16, 'Conversion': 0.9, 'MarketPrice': 0.0, 'VolantyPrice': 0.0, 'ExpectedMargin': 0.0, 'PBuy': 0.0, 'PSelling': 0.0, 'Date': '2019-10-04' },
         { 'Brand': 'FIAT', 'Model': 'UNO', 'Margin': 0.16, 'Conversion': 0.9, 'MarketPrice': 0.0, 'VolantyPrice': 0.0, 'ExpectedMargin': 0.0, 'PBuy': 0.0, 'PSelling': 0.0, 'Date': '2019-10-04' },
         { 'Brand': 'FORD', 'Model': 'FIESTA', 'Margin': 0.16, 'Conversion': 0.9, 'MarketPrice': 0.0, 'VolantyPrice': 0.0, 'ExpectedMargin': 0.0, 'PBuy': 0.0, 'PSelling': 0.0, 'Date': '2019-10-04' },
@@ -55,8 +55,8 @@ def getData(start=None, end=None):
         { 'Brand': 'CITROEN', 'Model': 'C4', 'Margin': 0.16, 'Conversion': 0.9, 'MarketPrice': 0.0, 'VolantyPrice': 0.0, 'ExpectedMargin': 0.0, 'PBuy': 0.0, 'PSelling': 0.0, 'Date': '2019-10-04' },
         { 'Brand': 'NISSAN', 'Model': 'MARCH', 'Margin': 0.16, 'Conversion': 0.9, 'MarketPrice': 0.0, 'VolantyPrice': 0.0, 'ExpectedMargin': 0.0, 'PBuy': 0.0, 'PSelling': 0.0, 'Date': '2019-10-04' },
 
-        { 'Brand': 'HYUNDAI', 'Model': 'HB20', 'Margin': 0.17, 'Conversion': 0.88, 'MarketPrice': 0.0, 'VolantyPrice': 0.0, 'ExpectedMargin': 0.0, 'PBuy': 0.0, 'PSelling': 0.0, 'Date': '2019-10-05' },
-        { 'Brand': 'RENAULT', 'Model': 'SANDERO', 'Margin': 0.16, 'Conversion': 0.9, 'MarketPrice': 0.0, 'VolantyPrice': 0.0, 'ExpectedMargin': 0.0, 'PBuy': 0.0, 'PSelling': 0.0, 'Date': '2019-10-05' },
+        { 'Brand': 'HYUNDAI', 'Model': 'HB20', 'Margin': 0.166, 'Conversion': 0.88, 'MarketPrice': 0.0, 'VolantyPrice': 0.0, 'ExpectedMargin': 0.0, 'PBuy': 0.0, 'PSelling': 0.0, 'Date': '2019-10-05' },
+        { 'Brand': 'RENAULT', 'Model': 'SANDERO', 'Margin': 0.151, 'Conversion': 0.9, 'MarketPrice': 0.0, 'VolantyPrice': 0.0, 'ExpectedMargin': 0.0, 'PBuy': 0.0, 'PSelling': 0.0, 'Date': '2019-10-05' },
         { 'Brand': 'VOLKSWAGEN', 'Model': 'UP', 'Margin': 0.16, 'Conversion': 0.9, 'MarketPrice': 0.0, 'VolantyPrice': 0.0, 'ExpectedMargin': 0.0, 'PBuy': 0.0, 'PSelling': 0.0, 'Date': '2019-10-05' },
         { 'Brand': 'FIAT', 'Model': 'UNO', 'Margin': 0.16, 'Conversion': 0.9, 'MarketPrice': 0.0, 'VolantyPrice': 0.0, 'ExpectedMargin': 0.0, 'PBuy': 0.0, 'PSelling': 0.0, 'Date': '2019-10-05' },
         { 'Brand': 'FORD', 'Model': 'FIESTA', 'Margin': 0.16, 'Conversion': 0.9, 'MarketPrice': 0.0, 'VolantyPrice': 0.0, 'ExpectedMargin': 0.0, 'PBuy': 0.0, 'PSelling': 0.0, 'Date': '2019-10-05' },
@@ -68,8 +68,8 @@ def getData(start=None, end=None):
         { 'Brand': 'CITROEN', 'Model': 'C4', 'Margin': 0.16, 'Conversion': 0.9, 'MarketPrice': 0.0, 'VolantyPrice': 0.0, 'ExpectedMargin': 0.0, 'PBuy': 0.0, 'PSelling': 0.0, 'Date': '2019-10-05' },
         { 'Brand': 'NISSAN', 'Model': 'MARCH', 'Margin': 0.16, 'Conversion': 0.9, 'MarketPrice': 0.0, 'VolantyPrice': 0.0, 'ExpectedMargin': 0.0, 'PBuy': 0.0, 'PSelling': 0.0, 'Date': '2019-10-05' },
 
-        { 'Brand': 'HYUNDAI', 'Model': 'HB20', 'Margin': 0.17, 'Conversion': 0.88, 'MarketPrice': 0.0, 'VolantyPrice': 0.0, 'ExpectedMargin': 0.0, 'PBuy': 0.0, 'PSelling': 0.0, 'Date': '2019-10-06' },
-        { 'Brand': 'RENAULT', 'Model': 'SANDERO', 'Margin': 0.16, 'Conversion': 0.9, 'MarketPrice': 0.0, 'VolantyPrice': 0.0, 'ExpectedMargin': 0.0, 'PBuy': 0.0, 'PSelling': 0.0, 'Date': '2019-10-06' },
+        { 'Brand': 'HYUNDAI', 'Model': 'HB20', 'Margin': 0.165, 'Conversion': 0.88, 'MarketPrice': 0.0, 'VolantyPrice': 0.0, 'ExpectedMargin': 0.0, 'PBuy': 0.0, 'PSelling': 0.0, 'Date': '2019-10-06' },
+        { 'Brand': 'RENAULT', 'Model': 'SANDERO', 'Margin': 0.148, 'Conversion': 0.9, 'MarketPrice': 0.0, 'VolantyPrice': 0.0, 'ExpectedMargin': 0.0, 'PBuy': 0.0, 'PSelling': 0.0, 'Date': '2019-10-06' },
         { 'Brand': 'VOLKSWAGEN', 'Model': 'UP', 'Margin': 0.16, 'Conversion': 0.9, 'MarketPrice': 0.0, 'VolantyPrice': 0.0, 'ExpectedMargin': 0.0, 'PBuy': 0.0, 'PSelling': 0.0, 'Date': '2019-10-06' },
         { 'Brand': 'FIAT', 'Model': 'UNO', 'Margin': 0.16, 'Conversion': 0.9, 'MarketPrice': 0.0, 'VolantyPrice': 0.0, 'ExpectedMargin': 0.0, 'PBuy': 0.0, 'PSelling': 0.0, 'Date': '2019-10-06' },
         { 'Brand': 'FORD', 'Model': 'FIESTA', 'Margin': 0.16, 'Conversion': 0.9, 'MarketPrice': 0.0, 'VolantyPrice': 0.0, 'ExpectedMargin': 0.0, 'PBuy': 0.0, 'PSelling': 0.0, 'Date': '2019-10-06' },
@@ -81,8 +81,8 @@ def getData(start=None, end=None):
         { 'Brand': 'CITROEN', 'Model': 'C4', 'Margin': 0.16, 'Conversion': 0.9, 'MarketPrice': 0.0, 'VolantyPrice': 0.0, 'ExpectedMargin': 0.0, 'PBuy': 0.0, 'PSelling': 0.0, 'Date': '2019-10-06' },
         { 'Brand': 'NISSAN', 'Model': 'MARCH', 'Margin': 0.16, 'Conversion': 0.9, 'MarketPrice': 0.0, 'VolantyPrice': 0.0, 'ExpectedMargin': 0.0, 'PBuy': 0.0, 'PSelling': 0.0, 'Date': '2019-10-06' },
 
-        { 'Brand': 'HYUNDAI', 'Model': 'HB20', 'Margin': 0.17, 'Conversion': 0.88, 'MarketPrice': 0.0, 'VolantyPrice': 0.0, 'ExpectedMargin': 0.0, 'PBuy': 0.0, 'PSelling': 0.0, 'Date': '2019-10-07' },
-        { 'Brand': 'RENAULT', 'Model': 'SANDERO', 'Margin': 0.16, 'Conversion': 0.9, 'MarketPrice': 0.0, 'VolantyPrice': 0.0, 'ExpectedMargin': 0.0, 'PBuy': 0.0, 'PSelling': 0.0, 'Date': '2019-10-07' },
+        { 'Brand': 'HYUNDAI', 'Model': 'HB20', 'Margin': 0.167, 'Conversion': 0.88, 'MarketPrice': 0.0, 'VolantyPrice': 0.0, 'ExpectedMargin': 0.0, 'PBuy': 0.0, 'PSelling': 0.0, 'Date': '2019-10-07' },
+        { 'Brand': 'RENAULT', 'Model': 'SANDERO', 'Margin': 0.153, 'Conversion': 0.9, 'MarketPrice': 0.0, 'VolantyPrice': 0.0, 'ExpectedMargin': 0.0, 'PBuy': 0.0, 'PSelling': 0.0, 'Date': '2019-10-07' },
         { 'Brand': 'VOLKSWAGEN', 'Model': 'UP', 'Margin': 0.16, 'Conversion': 0.9, 'MarketPrice': 0.0, 'VolantyPrice': 0.0, 'ExpectedMargin': 0.0, 'PBuy': 0.0, 'PSelling': 0.0, 'Date': '2019-10-07' },
         { 'Brand': 'FIAT', 'Model': 'UNO', 'Margin': 0.16, 'Conversion': 0.9, 'MarketPrice': 0.0, 'VolantyPrice': 0.0, 'ExpectedMargin': 0.0, 'PBuy': 0.0, 'PSelling': 0.0, 'Date': '2019-10-07' },
         { 'Brand': 'FORD', 'Model': 'FIESTA', 'Margin': 0.16, 'Conversion': 0.9, 'MarketPrice': 0.0, 'VolantyPrice': 0.0, 'ExpectedMargin': 0.0, 'PBuy': 0.0, 'PSelling': 0.0, 'Date': '2019-10-07' },
@@ -94,8 +94,8 @@ def getData(start=None, end=None):
         { 'Brand': 'CITROEN', 'Model': 'C4', 'Margin': 0.16, 'Conversion': 0.9, 'MarketPrice': 0.0, 'VolantyPrice': 0.0, 'ExpectedMargin': 0.0, 'PBuy': 0.0, 'PSelling': 0.0, 'Date': '2019-10-07' },
         { 'Brand': 'NISSAN', 'Model': 'MARCH', 'Margin': 0.16, 'Conversion': 0.9, 'MarketPrice': 0.0, 'VolantyPrice': 0.0, 'ExpectedMargin': 0.0, 'PBuy': 0.0, 'PSelling': 0.0, 'Date': '2019-10-07' },
 
-        { 'Brand': 'HYUNDAI', 'Model': 'HB20', 'Margin': 0.17, 'Conversion': 0.88, 'MarketPrice': 0.0, 'VolantyPrice': 0.0, 'ExpectedMargin': 0.0, 'PBuy': 0.0, 'PSelling': 0.0, 'Date': '2019-10-08' },
-        { 'Brand': 'RENAULT', 'Model': 'SANDERO', 'Margin': 0.16, 'Conversion': 0.9, 'MarketPrice': 0.0, 'VolantyPrice': 0.0, 'ExpectedMargin': 0.0, 'PBuy': 0.0, 'PSelling': 0.0, 'Date': '2019-10-08' },
+        { 'Brand': 'HYUNDAI', 'Model': 'HB20', 'Margin': 0.163, 'Conversion': 0.88, 'MarketPrice': 0.0, 'VolantyPrice': 0.0, 'ExpectedMargin': 0.0, 'PBuy': 0.0, 'PSelling': 0.0, 'Date': '2019-10-08' },
+        { 'Brand': 'RENAULT', 'Model': 'SANDERO', 'Margin': 0.157, 'Conversion': 0.9, 'MarketPrice': 0.0, 'VolantyPrice': 0.0, 'ExpectedMargin': 0.0, 'PBuy': 0.0, 'PSelling': 0.0, 'Date': '2019-10-08' },
         { 'Brand': 'VOLKSWAGEN', 'Model': 'UP', 'Margin': 0.16, 'Conversion': 0.9, 'MarketPrice': 0.0, 'VolantyPrice': 0.0, 'ExpectedMargin': 0.0, 'PBuy': 0.0, 'PSelling': 0.0, 'Date': '2019-10-08' },
         { 'Brand': 'FIAT', 'Model': 'UNO', 'Margin': 0.16, 'Conversion': 0.9, 'MarketPrice': 0.0, 'VolantyPrice': 0.0, 'ExpectedMargin': 0.0, 'PBuy': 0.0, 'PSelling': 0.0, 'Date': '2019-10-08' },
         { 'Brand': 'FORD', 'Model': 'FIESTA', 'Margin': 0.16, 'Conversion': 0.9, 'MarketPrice': 0.0, 'VolantyPrice': 0.0, 'ExpectedMargin': 0.0, 'PBuy': 0.0, 'PSelling': 0.0, 'Date': '2019-10-08' },
@@ -106,6 +106,28 @@ def getData(start=None, end=None):
         { 'Brand': 'CITROEN', 'Model': 'C3', 'Margin': 0.16, 'Conversion': 0.9, 'MarketPrice': 0.0, 'VolantyPrice': 0.0, 'ExpectedMargin': 0.0, 'PBuy': 0.0, 'PSelling': 0.0, 'Date': '2019-10-08' },
         { 'Brand': 'CITROEN', 'Model': 'C4', 'Margin': 0.16, 'Conversion': 0.9, 'MarketPrice': 0.0, 'VolantyPrice': 0.0, 'ExpectedMargin': 0.0, 'PBuy': 0.0, 'PSelling': 0.0, 'Date': '2019-10-08' },
         { 'Brand': 'NISSAN', 'Model': 'MARCH', 'Margin': 0.16, 'Conversion': 0.9, 'MarketPrice': 0.0, 'VolantyPrice': 0.0, 'ExpectedMargin': 0.0, 'PBuy': 0.0, 'PSelling': 0.0, 'Date': '2019-10-08' }
+
+    ]
+    return pd.DataFrame(apiResult)
+
+def getInventoryData():
+    apiResult = [
+        { 'Brand': 'HYUNDAI', 'Model': 'HB20', 'Version': 'XPTO', 'VolantyPrice': 39990, 'CurrentMargin': 0.14, 'SuggestedPrice': 40100, 'SuggestedMargin': 0.143},
+        { 'Brand': 'HYUNDAI', 'Model': 'FIESTA', 'Version': 'XPTO', 'VolantyPrice': 39990, 'CurrentMargin': 0.14, 'SuggestedPrice': 40100, 'SuggestedMargin': 0.143},
+        { 'Brand': 'HYUNDAI', 'Model': 'SANDERO', 'Version': 'XPTO', 'VolantyPrice': 39990, 'CurrentMargin': 0.14, 'SuggestedPrice': 40100, 'SuggestedMargin': 0.143},
+        { 'Brand': 'HYUNDAI', 'Model': 'FOX', 'Version': 'XPTO', 'VolantyPrice': 39990, 'CurrentMargin': 0.14, 'SuggestedPrice': 40100, 'SuggestedMargin': 0.143},
+        { 'Brand': 'HYUNDAI', 'Model': 'FOX', 'Version': 'XPTO', 'VolantyPrice': 39990, 'CurrentMargin': 0.14, 'SuggestedPrice': 40100, 'SuggestedMargin': 0.143},
+        { 'Brand': 'HYUNDAI', 'Model': 'UP', 'Version': 'XPTO', 'VolantyPrice': 39990, 'CurrentMargin': 0.14, 'SuggestedPrice': 40100, 'SuggestedMargin': 0.143},
+        { 'Brand': 'HYUNDAI', 'Model': 'C3', 'Version': 'XPTO', 'VolantyPrice': 39990, 'CurrentMargin': 0.14, 'SuggestedPrice': 40100, 'SuggestedMargin': 0.143},
+        { 'Brand': 'HYUNDAI', 'Model': 'C4', 'Version': 'XPTO', 'VolantyPrice': 39990, 'CurrentMargin': 0.14, 'SuggestedPrice': 40100, 'SuggestedMargin': 0.143},
+        { 'Brand': 'HYUNDAI', 'Model': 'FIT', 'Version': 'XPTO', 'VolantyPrice': 39990, 'CurrentMargin': 0.14, 'SuggestedPrice': 40100, 'SuggestedMargin': 0.143},
+        { 'Brand': 'HYUNDAI', 'Model': 'KA', 'Version': 'XPTO', 'VolantyPrice': 39990, 'CurrentMargin': 0.14, 'SuggestedPrice': 40100, 'SuggestedMargin': 0.143},
+        { 'Brand': 'HYUNDAI', 'Model': 'HB20S', 'Version': 'XPTO', 'VolantyPrice': 39990, 'CurrentMargin': 0.14, 'SuggestedPrice': 40100, 'SuggestedMargin': 0.143},
+        { 'Brand': 'HYUNDAI', 'Model': 'HB20X', 'Version': 'XPTO', 'VolantyPrice': 39990, 'CurrentMargin': 0.14, 'SuggestedPrice': 40100, 'SuggestedMargin': 0.143},
+        { 'Brand': 'HYUNDAI', 'Model': 'CRUZE', 'Version': 'XPTO', 'VolantyPrice': 39990, 'CurrentMargin': 0.14, 'SuggestedPrice': 40100, 'SuggestedMargin': 0.143},
+        { 'Brand': 'HYUNDAI', 'Model': 'FOCUS', 'Version': 'XPTO', 'VolantyPrice': 39990, 'CurrentMargin': 0.14, 'SuggestedPrice': 40100, 'SuggestedMargin': 0.143},
+        { 'Brand': 'HYUNDAI', 'Model': '318i', 'Version': 'XPTO', 'VolantyPrice': 39990, 'CurrentMargin': 0.14, 'SuggestedPrice': 40100, 'SuggestedMargin': 0.143},
+        { 'Brand': 'HYUNDAI', 'Model': 'A3', 'Version': 'XPTO', 'VolantyPrice': 39990, 'CurrentMargin': 0.14, 'SuggestedPrice': 40100, 'SuggestedMargin': 0.143},
 
     ]
     return pd.DataFrame(apiResult)
