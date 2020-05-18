@@ -11,25 +11,35 @@ SIDEBAR_STYLE = {
     "bottom": 0,
     "width": "16rem",
     "padding": "2rem 1rem",
-    "background-color": "#f8f9fa",
+    "background-color": "#001E61",
 }
 
-layout = html.Nav([
-        html.Div([
-            html.H2("Volanty")
-        ], className="sidebar-header"),
-        dbc.Nav(
-            children=[
-                dbc.NavItem(dbc.NavLink("Margin", href="/")),
-                dbc.NavItem(dbc.NavLink("Inventory", href="/inventory")),
-                html.HR(),
-                dcc.Slider(id="time-range-slider",
+time_range_marks = {
+    5: '5',
+    7: '7',
+    10: '10'
+}
+
+slider = dcc.Slider(id="time-range-slider",
+                    marks=time_range_marks,
                     min=5,
-                    step=1,
                     max=10,
-                    value=7)
-            ],
-            vertical=True,
-            pills=True
-        ),
-], style=SIDEBAR_STYLE)
+                    step=None,
+                    value=5
+                    )
+
+layout = html.Nav([
+    html.Div([
+        html.Img(src="/assets/logo-volanty.svg")
+    ], className="sidebar-header"),
+    dbc.Nav(
+        children=[
+            dbc.NavItem(dbc.NavLink("Margin", href="/", className="menu-link")),
+            dbc.NavItem(dbc.NavLink("Inventory", href="/inventory", className="menu-link")),
+            html.Hr()
+        ],
+        vertical=True,
+        pills=True,
+        className="sidebar-content"
+    ),
+], className="sidebar-body", style=SIDEBAR_STYLE)
