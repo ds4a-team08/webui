@@ -1,6 +1,6 @@
 import dash_bootstrap_components as dbc
 import dash_html_components as html
-from dash.dependencies import Input, Output, State
+import dash_core_components as dcc
 
 from app import app
 
@@ -21,7 +21,13 @@ layout = html.Nav([
         dbc.Nav(
             children=[
                 dbc.NavItem(dbc.NavLink("Margin", href="/")),
-                dbc.NavItem(dbc.NavLink("Inventory", href="/inventory"))
+                dbc.NavItem(dbc.NavLink("Inventory", href="/inventory")),
+                html.HR(),
+                dcc.Slider(id="time-range-slider",
+                    min=5,
+                    step=1,
+                    max=10,
+                    value=7)
             ],
             vertical=True,
             pills=True
