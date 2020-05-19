@@ -4,7 +4,7 @@ import dash_core_components as dcc
 import plotly.express as px
 import pandas as pd
 
-class Inventory:
+class InventoryComponentBuilder:
 
     def adviceLayout(self, inventoryData):
         table = dbc.Table.from_dataframe(inventoryData, striped=True, bordered=True, hover=True)
@@ -25,5 +25,3 @@ class Inventory:
             top_df = top_df.append({'index': 'Others', indexName: others_df[indexName].astype(int).sum()}, ignore_index=True)
         fig = px.pie(names="index", values=indexName, title=indexName+" Composition", data_frame=top_df)
         return dcc.Graph(figure=fig)
-
-INSTANCE = Inventory()

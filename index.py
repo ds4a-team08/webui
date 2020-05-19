@@ -29,7 +29,8 @@ def display_page(pathname, value):
         startDate = endDate - timedelta(days=value)
         control.getData(startDate, endDate)
     elif pathname == '/inventory':
-        return controllers.inventory.layout
+        control = controllers.InventoryController()
+        control.getData()
     else:
         return '404'
     return control.getLayout()

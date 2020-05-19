@@ -1,2 +1,2 @@
 from controllers.MarginController import MarginController
-import controllers.inventory
+from controllers.InventoryController import InventoryController
