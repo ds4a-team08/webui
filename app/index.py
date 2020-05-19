@@ -40,4 +40,4 @@ def display_page(pathname, value):
     return control.getLayout()
 
 if __name__ == '__main__':
-    app.run_server(debug=DEBUG)
+    app.run_server(host='0.0.0.0', debug=DEBUG)
