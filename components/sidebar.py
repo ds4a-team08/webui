@@ -12,6 +12,7 @@ SIDEBAR_STYLE = {
     "width": "16rem",
     "padding": "2rem 1rem",
     "background-color": "#001E61",
+    "color": "#FF5100"
 }
 
 time_range_marks = {
@@ -20,13 +21,16 @@ time_range_marks = {
     10: '10'
 }
 
-slider = dcc.Slider(id="time-range-slider",
-                    marks=time_range_marks,
-                    min=5,
-                    max=10,
-                    step=None,
-                    value=5
-                    )
+slider = dbc.Row(dbc.Col([
+            html.P('How many days to analyze?'),
+            dcc.Slider(id="time-range-slider",
+                marks=time_range_marks,
+                min=5,
+                max=10,
+                step=None,
+                value=5
+            )
+        ]))
 
 layout = html.Nav([
     html.Div([
@@ -34,9 +38,10 @@ layout = html.Nav([
     ], className="sidebar-header"),
     dbc.Nav(
         children=[
-            dbc.NavItem(dbc.NavLink("Margin", href="/", className="menu-link")),
-            dbc.NavItem(dbc.NavLink("Inventory", href="/inventory", className="menu-link")),
-            html.Hr()
+            dbc.NavItem(dbc.NavLink(dbc.Button("Margin", block=True, color="primary"), href="/", className="menu-link")),
+            dbc.NavItem(dbc.NavLink(dbc.Button("Inventory", block=True, color="primary"), href="/inventory", className="menu-link")),
+            html.Hr(),
+            slider
         ],
         vertical=True,
         pills=True,

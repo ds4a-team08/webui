@@ -2,10 +2,12 @@ import dash_core_components as dcc
 import dash_html_components as html
 from dash.dependencies import Input, Output
 import dash_bootstrap_components as dbc
+from datetime import date, timedelta
 
 from app import app
 import controllers
 import components as c
+import controllers
 
 
 CONTENT_STYLE = {
@@ -19,14 +21,18 @@ app.layout = dbc.Container([
 ])
 
 @app.callback(Output('page-content', 'children'),
-              [Input('url', 'pathname')])
-def display_page(pathname):
+              [Input('url', 'pathname'), Input('time-range-slider', 'value')])
+def display_page(pathname, value):
     if pathname in ['/', '/margin']:
-        return controllers.margin.layout
+        control = controllers.MarginController()
+        endDate = date(2019, 10, 10)
+        startDate = endDate - timedelta(days=value)
+        control.getData(startDate, endDate)
     elif pathname == '/inventory':
         return controllers.inventory.layout
     else:
         return '404'
+    return control.getLayout()
 
 if __name__ == '__main__':
     app.run_server(debug=True)
