@@ -6,9 +6,9 @@ import os
 class InventoryController:
     def __init__(self):
         self.view = views.InventoryView()
-        self.backend_url = os.environ['BACKEND_URL'] if 'BACKEND_URL' in os.environ else 'http://localhost:8000'
+        self.backend_url = os.environ['BACKEND_URL'] if 'BACKEND_URL' in os.environ else 'http://localhost:80'
         self.df = None
-    
+
     def getData(self):
         apiResult = requests.get("{}/inventory".format(self.backend_url))
         # apiResult = [
@@ -33,6 +33,6 @@ class InventoryController:
         df = df.sort_values(by=['MarginDiff', 'marca', 'modelo'], ascending=[False, True, True])
         df = df.drop(columns=['MarginDiff'])
         self.df = df
-    
+
     def getLayout(self):
         return self.view.layout(self.df)
