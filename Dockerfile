@@ -15,14 +15,14 @@ RUN useradd -ms /bin/bash webui
 
 USER webui
 
-WORKDIR /home/webui
-
 COPY --from=build /venv /venv
-COPY *.py ./
+COPY ./app /home/webui/app
+
+WORKDIR /home/webui/app
 
 ENV VIRTUAL_ENV="/venv"
 ENV PATH="${VIRTUAL_ENV}/bin:$PATH"
 
-EXPOSE 8501
+EXPOSE 8050
 
-CMD streamlit run app.py
+CMD python index.py
