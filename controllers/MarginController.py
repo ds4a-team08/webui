@@ -6,6 +6,7 @@ import os
 class MarginController:
     def __init__(self):
         self.view = MarginView()
+        self.backend_url = os.environ['BACKEND_URL'] if os.environ['BACKEND_URL'] else 'http://localhost:8000'
         self.df = None
 
     def getData(self, startDate, endDate):
