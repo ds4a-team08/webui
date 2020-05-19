@@ -6,7 +6,7 @@ import os
 class InventoryController:
     def __init__(self):
         self.view = views.InventoryView()
-        self.backend_url = os.environ['BACKEND_URL'] if os.environ['BACKEND_URL'] else 'http://localhost:8000'
+        self.backend_url = os.environ['BACKEND_URL'] if 'BACKEND_URL' in os.environ else 'http://localhost:8000'
         self.df = None
     
     def getData(self):

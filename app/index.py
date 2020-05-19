@@ -8,7 +8,11 @@ from app import app
 import controllers
 import components as c
 import controllers
+import os
 
+DEBUG=False
+if 'DEBUG' in os.environ and os.environ['DEBUG'] == 'true':
+    DEBUG=True
 
 CONTENT_STYLE = {
     "padding": "2rem 1rem",
@@ -36,4 +40,4 @@ def display_page(pathname, value):
     return control.getLayout()
 
 if __name__ == '__main__':
-    app.run_server(debug=True)
+    app.run_server(debug=DEBUG)

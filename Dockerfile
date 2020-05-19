@@ -6,16 +6,17 @@ ENV PATH="/venv/bin:$PATH"
 COPY requirements.txt .
 
 RUN python -m venv ${VIRTUAL_ENV} \
-&&  pip install --no-cache-dir -r requirements.txt
+&&  pip install --no-cache-dir -r requirements.txt \
+&&  useradd -u 10001 webui
 
 #####
 FROM python AS release
 
-RUN useradd -ms /bin/bash webui
+COPY --from=build /etc/passwd /etc/passwd
+COPY --from=build /venv /venv
 
 USER webui
 
-COPY --from=build /venv /venv
 COPY ./app /home/webui/app
 
 WORKDIR /home/webui/app

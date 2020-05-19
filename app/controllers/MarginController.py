@@ -6,11 +6,11 @@ import os
 class MarginController:
     def __init__(self):
         self.view = MarginView()
-        self.backend_url = os.environ['BACKEND_URL'] if os.environ['BACKEND_URL'] else 'http://localhost:8000'
+        self.backend_url = os.environ['BACKEND_URL'] if 'BACKEND_URL' in os.environ else 'http://localhost:8000'
         self.df = None
 
     def getData(self, startDate, endDate):
-        apiResult = requests.get('{}/margin?start_date={}&end_date={}'.format(os.environ['BACKEND_URL'],startDate, endDate))
+        apiResult = requests.get('{}/margin?start_date={}&end_date={}'.format(self.backend_url,startDate, endDate))
         result_df = pd.DataFrame(apiResult.json())
         result_df = result_df.set_index('Date')
         self.df = result_df
