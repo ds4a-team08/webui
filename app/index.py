@@ -1,13 +1,12 @@
 import dash_core_components as dcc
 import dash_html_components as html
-from dash.dependencies import Input, Output
 import dash_bootstrap_components as dbc
 from datetime import date, timedelta
+from dash.dependencies import Input, Output, State
 
 from app import app
 import controllers
-import components as c
-import controllers
+import components
 import os
 
 DEBUG=False
@@ -20,7 +19,7 @@ CONTENT_STYLE = {
 
 app.layout = dbc.Container([
     dcc.Location(id='url', refresh=False),
-    c.sidebar.layout,
+    components.sidebar.layout,
     html.Div(id="page-content", style=CONTENT_STYLE)
 ])
 
