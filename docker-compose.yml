@@ -1,0 +1,13 @@
+version: '2.0'
+services:
+  frontend:
+    image: alessandron3/ds4a-team08-webui
+    network_mode: host
+    environment: 
+        - DEBUG=false
+        - BACKEND_URL=localhost:8000
+    depends_on:
+        - "backend"
+  backend:
+    image: alessandron3/ds4a-team08
+    network_mode: host
