@@ -5,18 +5,3 @@ body {
 .menu-link {
     color: #FF5100
 }
-
-.sidebar-body {
-    position: "fixed";
-    top: 0;
-    left: 0;
-    bottom: 0;
-    width: "16rem";
-    padding: "2rem 1rem";
-    background-color: #001E61;
-}
-
-.sidebar-content {
-    padding:10px;
-    padding-top: 50px;
-}

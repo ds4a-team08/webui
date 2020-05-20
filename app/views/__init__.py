@@ -1,2 +1,3 @@
-from views.MarginView import MarginView
-from views.InventoryView import InventoryView
+from . MarginView import MarginView
+from . InventoryView import InventoryView
+from . SidebarView import SidebarView
