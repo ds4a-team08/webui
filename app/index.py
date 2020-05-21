@@ -19,7 +19,7 @@ CONTENT_STYLE = {
 
 app.layout = dbc.Container([
     dcc.Location(id='url', refresh=False),
-    components.sidebar.layout,
+    components.Sidebar.layout,
     html.Div(id="page-content", style=CONTENT_STYLE)
 ])
 

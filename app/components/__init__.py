@@ -1,3 +1,3 @@
-import components.sidebar as sidebar
+import components.Sidebar as sidebar
 from components.Inventory import InventoryComponentBuilder
 from components.Margin import MarginComponentBuilder
