@@ -4,6 +4,7 @@ import dash_core_components as dcc
 
 from app import app
 
+
 class SidebarComponentBuilder:
     def __init__(self):
         self.TIME_RANGE_MARKS = {
