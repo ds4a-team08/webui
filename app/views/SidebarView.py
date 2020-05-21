@@ -2,7 +2,7 @@ import dash_html_components as html
 import dash_bootstrap_components as dbc
 
 from components import SidebarComponentBuilder
-import df_functions as f
+
 
 class SidebarView:
 

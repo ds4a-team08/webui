@@ -3,6 +3,7 @@ import requests
 import pandas as pd
 import os
 
+
 class MarginController:
     def __init__(self):
         self.view = MarginView()

@@ -4,6 +4,7 @@ import df_functions as f
 
 from components import MarginComponentBuilder
 
+
 class MarginView:
     def __init__(self):
         self.builder = MarginComponentBuilder()

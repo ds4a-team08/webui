@@ -3,6 +3,7 @@ import views
 import requests
 import os
 
+
 class InventoryController:
     def __init__(self):
         self.view = views.InventoryView()
