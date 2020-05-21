@@ -4,6 +4,7 @@ import dash_table
 import pandas as pd
 import dash_html_components as html
 
+
 class MarginComponentBuilder:
 
     def goalLayout(self, marginData):

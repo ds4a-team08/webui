@@ -3,10 +3,11 @@ import requests
 import pandas as pd
 import os
 
+
 class MarginController:
     def __init__(self):
         self.view = MarginView()
-        self.backend_url = os.environ['BACKEND_URL'] if 'BACKEND_URL' in os.environ else 'http://localhost'
+        self.backend_url = os.environ['BACKEND_URL'] if 'BACKEND_URL' in os.environ else 'http://localhost:8000'
         self.df = None
 
     def getData(self, startDate, endDate):
