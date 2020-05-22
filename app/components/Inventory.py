@@ -6,9 +6,14 @@ import plotly.express as px
 class InventoryComponentBuilder:
 
     def adviceLayout(self, inventoryData):
-        keep_columns = ['marca', 'modelo', 'versao', 'preco_por', 'current_margin', 'target_price', 'suggested_margin']
+        keep_columns = ['inspectionKey','marca', 'modelo', 'versao', 'preco_por', 'current_margin', 'target_price', 'suggested_margin']
+        keep_models = ['HB20', 'CRUZE', 'ONIX', 'KA', 'SANDERO', 'C3', 'CITY', 'FOX', 'LOGAN', 'PALIO']
         show_df = inventoryData[keep_columns]
+        show_df = show_df[show_df['preco_por'].gt(10000)]
+        show_df = show_df[show_df['suggested_margin'].between(0.16, 0.5)]
+        show_df = show_df[show_df['modelo'].isin(keep_models)]
         show_df = show_df.round({'current_margin': 3, 'suggested_margin': 3})
+        show_df = show_df[show_df['suggested_margin'].gt(show_df['current_margin'])]
         #show_df.loc[show_df['suggested_margin']] = show_df['suggested_margin'].round(3)
         table = dbc.Table.from_dataframe(show_df, striped=True, bordered=True, hover=True)
         return table
