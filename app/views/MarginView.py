@@ -10,7 +10,7 @@ class MarginView:
         self.builder = MarginComponentBuilder()
     
     def __header(self):
-        return dbc.Row(dbc.Col(html.H1(children='Margin Optimization')))
+        return dbc.Row(dbc.Col(html.H1(children='Margin Tracking')))
 
     def __first(self, df):
         return dbc.Row([
